@@ -1,0 +1,452 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1871250A2C4833070035E438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187125092C4833070035E438 /* AppDelegate.swift */; };
+		1871250C2C4833070035E438 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871250B2C4833070035E438 /* SceneDelegate.swift */; };
+		1871250E2C4833070035E438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871250D2C4833070035E438 /* ViewController.swift */; };
+		187125112C4833080035E438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1871250F2C4833070035E438 /* Main.storyboard */; };
+		187125142C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */; };
+		187125162C48330A0035E438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187125152C48330A0035E438 /* Assets.xcassets */; };
+		187125192C48330A0035E438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187125172C48330A0035E438 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		187125062C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationTracking_GOQii_VivekLokhande.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		187125092C4833070035E438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1871250B2C4833070035E438 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1871250D2C4833070035E438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		187125102C4833070035E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		187125132C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HydrationTracking_GOQii_VivekLokhande.xcdatamodel; sourceTree = "<group>"; };
+		187125152C48330A0035E438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		187125182C48330A0035E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1871251A2C48330A0035E438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		187125032C4833070035E438 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187124FD2C4833070035E438 = {
+			isa = PBXGroup;
+			children = (
+				187125082C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande */,
+				187125072C4833070035E438 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		187125072C4833070035E438 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				187125062C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		187125082C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande */ = {
+			isa = PBXGroup;
+			children = (
+				187125212C4833290035E438 /* Application */,
+				187125202C4833260035E438 /* Constants */,
+				187125222C48333F0035E438 /* Extensions */,
+				187125232C4833540035E438 /* Helper */,
+				187125242C4833640035E438 /* Utility */,
+				187125252C4833770035E438 /* Modules */,
+				187125262C48338A0035E438 /* Storyboard */,
+				187125272C4833A10035E438 /* Resouces */,
+				1871251A2C48330A0035E438 /* Info.plist */,
+			);
+			path = HydrationTracking_GOQii_VivekLokhande;
+			sourceTree = "<group>";
+		};
+		187125202C4833260035E438 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		187125212C4833290035E438 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				187125092C4833070035E438 /* AppDelegate.swift */,
+				1871250B2C4833070035E438 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		187125222C48333F0035E438 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		187125232C4833540035E438 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				187125282C48342B0035E438 /* CoreData */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		187125242C4833640035E438 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		187125252C4833770035E438 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				1871250D2C4833070035E438 /* ViewController.swift */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		187125262C48338A0035E438 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				1871250F2C4833070035E438 /* Main.storyboard */,
+				187125172C48330A0035E438 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		187125272C4833A10035E438 /* Resouces */ = {
+			isa = PBXGroup;
+			children = (
+				187125152C48330A0035E438 /* Assets.xcassets */,
+			);
+			path = Resouces;
+			sourceTree = "<group>";
+		};
+		187125282C48342B0035E438 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		187125052C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1871251D2C48330A0035E438 /* Build configuration list for PBXNativeTarget "HydrationTracking_GOQii_VivekLokhande" */;
+			buildPhases = (
+				187125022C4833070035E438 /* Sources */,
+				187125032C4833070035E438 /* Frameworks */,
+				187125042C4833070035E438 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HydrationTracking_GOQii_VivekLokhande;
+			productName = HydrationTracking_GOQii_VivekLokhande;
+			productReference = 187125062C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		187124FE2C4833070035E438 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					187125052C4833070035E438 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 187125012C4833070035E438 /* Build configuration list for PBXProject "HydrationTracking_GOQii_VivekLokhande" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 187124FD2C4833070035E438;
+			productRefGroup = 187125072C4833070035E438 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				187125052C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		187125042C4833070035E438 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187125192C48330A0035E438 /* LaunchScreen.storyboard in Resources */,
+				187125162C48330A0035E438 /* Assets.xcassets in Resources */,
+				187125112C4833080035E438 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		187125022C4833070035E438 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1871250E2C4833070035E438 /* ViewController.swift in Sources */,
+				187125142C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld in Sources */,
+				1871250A2C4833070035E438 /* AppDelegate.swift in Sources */,
+				1871250C2C4833070035E438 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1871250F2C4833070035E438 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187125102C4833070035E438 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		187125172C48330A0035E438 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187125182C48330A0035E438 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1871251B2C48330A0035E438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1871251C2C48330A0035E438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1871251E2C48330A0035E438 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HydrationTracking_GOQii_VivekLokhande/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NeoSoft.HydrationTracking-GOQii-VivekLokhande";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1871251F2C48330A0035E438 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = HydrationTracking_GOQii_VivekLokhande/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "NeoSoft.HydrationTracking-GOQii-VivekLokhande";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187125012C4833070035E438 /* Build configuration list for PBXProject "HydrationTracking_GOQii_VivekLokhande" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1871251B2C48330A0035E438 /* Debug */,
+				1871251C2C48330A0035E438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1871251D2C48330A0035E438 /* Build configuration list for PBXNativeTarget "HydrationTracking_GOQii_VivekLokhande" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1871251E2C48330A0035E438 /* Debug */,
+				1871251F2C48330A0035E438 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				187125132C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodel */,
+			);
+			currentVersion = 187125132C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodel */;
+			path = HydrationTracking_GOQii_VivekLokhande.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 187124FE2C4833070035E438 /* Project object */;
+}
