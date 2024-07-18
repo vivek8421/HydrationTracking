@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
         drinkButton.setTitle("Drink \(cupCapacity) ml", for: .normal)
     }
     
-    
 // MARK: - Methods
     private func uiConfiguration() {
         let todayTarget = viewModel.getTodayTarget()
@@ -78,8 +77,6 @@ class HomeViewController: UIViewController {
         }
     }
     
-    
-    
     func hideKeyboardOnTap(){
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -108,7 +105,7 @@ class HomeViewController: UIViewController {
     }
 }
 
-// MARK: - Notification Methods 
+// MARK: - Notification Methods
 extension HomeViewController {
     func checkForPermission() {
         let notificationCenter = UNUserNotificationCenter.current()
@@ -135,7 +132,7 @@ extension HomeViewController {
         let identifier = "my-morning-notification"
         let title = "Reminder!"
         let body = "Set you daily target"
-        let hour = 8
+        let hour = 7
         let minute = 0
         let isDaily = true
         let content = UNMutableNotificationContent()
