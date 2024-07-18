@@ -1,4 +1,4 @@
-# Hydration Tracking iOS Application
+# Water Tracking iOS Application
 
 ### Setup Instructions
 1. Download the code using above green button
