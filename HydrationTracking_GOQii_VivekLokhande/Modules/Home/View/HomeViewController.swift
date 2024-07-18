@@ -41,13 +41,11 @@ class HomeViewController: UIViewController {
     
     private func showAlertForDailyTarget() {
         let alertController = UIAlertController(title: "Set today target", message: "Please enter the amount of water you drank today (in ml)", preferredStyle: .alert)
-        
         // Add a text field to the alert
         alertController.addTextField { textField in
             textField.placeholder = "Enter today target"
             textField.keyboardType = .numberPad
         }
-        
         // Add the OK action
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             // Handle the OK action
@@ -63,11 +61,17 @@ class HomeViewController: UIViewController {
     private func setTitlesAndGraph() {
         let target = viewModel.getTodayTarget() ?? 0
         let complete = viewModel.getCompleteDrinkAmount()
+        
         lblTargetDrink.text = "/\(target) ml"
         lblCompleteTargetDrink.text = "\(complete)"
         
         let progress = CGFloat(complete) / CGFloat(target)
         waterTracker.setProgress(to: progress, withAnimation: true)
+        
+        //if target is complete show Alert message
+        if complete >= target {
+            showAlertMessage(title: "Congratulations", message: "Your target is complete")
+        }
     }
     
     

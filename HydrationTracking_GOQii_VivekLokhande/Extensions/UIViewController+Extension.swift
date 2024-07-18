@@ -18,4 +18,12 @@ extension UIViewController {
         tableView.backgroundView = label
     }
 
+    func showAlertMessage(title: String = "", message: String = "",handler: (()->Void)? = nil){
+        let alertMessage = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let ok = UIAlertAction(title: "Ok", style: .cancel){_ in
+            if let handler{ handler() }
+        }
+        alertMessage.addAction(ok)
+        self.present(alertMessage, animated: true)
+    }
 }
