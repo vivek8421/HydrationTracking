@@ -10,17 +10,21 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--History-->
+        <!--Today's History-->
         <scene sceneID="VbC-0h-eCJ">
             <objects>
-                <viewController id="tCk-Lp-ReQ" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryViewController" id="tCk-Lp-ReQ" customClass="HistoryViewController" customModule="HydrationTracking_GOQii_VivekLokhande" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2Ts-SJ-Xyy">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V1N-aO-p9I">
-                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="tCk-Lp-ReQ" id="21I-TS-zXy"/>
+                                    <outlet property="delegate" destination="tCk-Lp-ReQ" id="7t4-4u-2jM"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hN2-3V-Y1a"/>
@@ -32,11 +36,14 @@
                             <constraint firstItem="hN2-3V-Y1a" firstAttribute="bottom" secondItem="V1N-aO-p9I" secondAttribute="bottom" id="yMf-1F-Tff"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="History" image="history" id="Qxo-wI-9VO"/>
+                    <navigationItem key="navigationItem" title="Today's History" id="IEB-y5-OSD"/>
+                    <connections>
+                        <outlet property="historyTableView" destination="V1N-aO-p9I" id="2xC-mk-a7P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KNA-pU-wln" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1657.2519083969464" y="643.66197183098598"/>
+            <point key="canvasLocation" x="1657" y="1373"/>
         </scene>
         <!--Cup List View Controller-->
         <scene sceneID="qaw-nO-KmL">
@@ -47,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="odC-I0-HcC">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <rect key="frame" x="0.0" y="59" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ROM-Nb-Zoo">
                                     <size key="itemSize" width="128" height="128"/>
@@ -61,13 +68,29 @@
                                     <outlet property="delegate" destination="cD9-bc-fis" id="sYs-kN-j9Q"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueK-Nf-Ja9">
+                                <rect key="frame" x="20" y="774" width="353" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="eOv-D6-a6C"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Save" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="18"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="didSaveButtonClick" destination="cD9-bc-fis" eventType="touchUpInside" id="hiP-yF-OmI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fcx-jV-mc2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="ueK-Nf-Ja9" firstAttribute="top" secondItem="odC-I0-HcC" secondAttribute="bottom" id="3qq-rY-I7X"/>
                             <constraint firstItem="odC-I0-HcC" firstAttribute="leading" secondItem="fcx-jV-mc2" secondAttribute="leading" id="6qo-U9-RFv"/>
-                            <constraint firstItem="fcx-jV-mc2" firstAttribute="bottom" secondItem="odC-I0-HcC" secondAttribute="bottom" id="TCE-hm-ENL"/>
+                            <constraint firstItem="ueK-Nf-Ja9" firstAttribute="leading" secondItem="fcx-jV-mc2" secondAttribute="leading" constant="20" id="XN6-fI-ia6"/>
                             <constraint firstItem="odC-I0-HcC" firstAttribute="top" secondItem="fcx-jV-mc2" secondAttribute="top" id="hP5-1W-JvA"/>
+                            <constraint firstItem="fcx-jV-mc2" firstAttribute="trailing" secondItem="ueK-Nf-Ja9" secondAttribute="trailing" constant="20" id="oOH-Jy-bOp"/>
+                            <constraint firstItem="fcx-jV-mc2" firstAttribute="bottom" secondItem="ueK-Nf-Ja9" secondAttribute="bottom" id="wAb-zK-6d3"/>
                             <constraint firstItem="fcx-jV-mc2" firstAttribute="trailing" secondItem="odC-I0-HcC" secondAttribute="trailing" id="yhZ-67-GJk"/>
                         </constraints>
                     </view>
@@ -77,7 +100,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKt-Or-4t0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1529" y="1356"/>
+            <point key="canvasLocation" x="-1529.0076335877861" y="1355.6338028169014"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="CMR-bx-nxO">
@@ -241,7 +264,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="gxo-T1-mRj" kind="relationship" relationship="viewControllers" id="Cj7-bo-ZhP"/>
-                        <segue destination="tCk-Lp-ReQ" kind="relationship" relationship="viewControllers" id="d0W-Fe-U56"/>
+                        <segue destination="vOL-QF-5HV" kind="relationship" relationship="viewControllers" id="d0W-Fe-U56"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AOj-6X-rIs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -266,6 +289,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="631-kQ-1o1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-753.43511450381675" y="643.66197183098598"/>
+        </scene>
+        <!--History-->
+        <scene sceneID="82F-Li-GQc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vOL-QF-5HV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="History" image="history" id="Qxo-wI-9VO"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="qbY-Ug-y7A">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tCk-Lp-ReQ" kind="relationship" relationship="rootViewController" id="wDE-uF-HZk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cdC-c8-V9T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1657.2519083969464" y="643.66197183098598"/>
         </scene>
     </scenes>
     <resources>

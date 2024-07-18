@@ -34,10 +34,5 @@ class CupCollectionViewCell: UICollectionViewCell {
             lblCupCapacity.text = "\(cupData.cupCapicity) ml"
         }
     }
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
 
 }

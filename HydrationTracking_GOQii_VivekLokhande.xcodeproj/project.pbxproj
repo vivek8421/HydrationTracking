@@ -25,6 +25,13 @@
 		187B9B992C48E720008913C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B982C48E720008913C3 /* Constants.swift */; };
 		187B9B9B2C491350008913C3 /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B9A2C491350008913C3 /* CustomUserDefaults.swift */; };
 		187B9B9D2C49184A008913C3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B9C2C49184A008913C3 /* HomeViewModel.swift */; };
+		187B9BA22C492D91008913C3 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BA12C492D91008913C3 /* HistoryViewController.swift */; };
+		187B9BA42C492E39008913C3 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BA32C492E39008913C3 /* HistoryViewModel.swift */; };
+		187B9BA72C492E65008913C3 /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BA52C492E65008913C3 /* HistoryTableViewCell.swift */; };
+		187B9BA82C492E65008913C3 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187B9BA62C492E65008913C3 /* HistoryTableViewCell.xib */; };
+		187B9BB12C49342E008913C3 /* HistoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BB02C49342E008913C3 /* HistoryModel.swift */; };
+		187B9BB32C493489008913C3 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BB22C493489008913C3 /* CoreDataManager.swift */; };
+		187B9BB92C494122008913C3 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9BB82C494122008913C3 /* UIViewController+Extension.swift */; };
 		18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */; };
 		18EA13A62C484528007E3FBE /* WaterAnimationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */; };
 /* End PBXBuildFile section */
@@ -50,6 +57,13 @@
 		187B9B982C48E720008913C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		187B9B9A2C491350008913C3 /* CustomUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
 		187B9B9C2C49184A008913C3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		187B9BA12C492D91008913C3 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		187B9BA32C492E39008913C3 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		187B9BA52C492E65008913C3 /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		187B9BA62C492E65008913C3 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryTableViewCell.xib; sourceTree = "<group>"; };
+		187B9BB02C49342E008913C3 /* HistoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryModel.swift; sourceTree = "<group>"; };
+		187B9BB22C493489008913C3 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		187B9BB82C494122008913C3 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAnimationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -120,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				187B9B912C48DF8C008913C3 /* Cell+Extensnion.swift */,
+				187B9BB82C494122008913C3 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -173,6 +188,7 @@
 			children = (
 				187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */,
 				18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */,
+				187B9BB22C493489008913C3 /* CoreDataManager.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -241,8 +257,37 @@
 		187B9BA02C4928DC008913C3 /* History */ = {
 			isa = PBXGroup;
 			children = (
+				187B9BAF2C493418008913C3 /* Model */,
+				187B9BAD2C4933EA008913C3 /* View */,
+				187B9BAE2C4933F0008913C3 /* ViewModel */,
 			);
 			path = History;
+			sourceTree = "<group>";
+		};
+		187B9BAD2C4933EA008913C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187B9BA12C492D91008913C3 /* HistoryViewController.swift */,
+				187B9BA52C492E65008913C3 /* HistoryTableViewCell.swift */,
+				187B9BA62C492E65008913C3 /* HistoryTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187B9BAE2C4933F0008913C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187B9BA32C492E39008913C3 /* HistoryViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		187B9BAF2C493418008913C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187B9BB02C49342E008913C3 /* HistoryModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187125192C48330A0035E438 /* LaunchScreen.storyboard in Resources */,
+				187B9BA82C492E65008913C3 /* HistoryTableViewCell.xib in Resources */,
 				187B9B8C2C48DCAF008913C3 /* CupCollectionViewCell.xib in Resources */,
 				187125162C48330A0035E438 /* Assets.xcassets in Resources */,
 				187125112C4833080035E438 /* Main.storyboard in Resources */,
@@ -318,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187B9B9B2C491350008913C3 /* CustomUserDefaults.swift in Sources */,
+				187B9BA42C492E39008913C3 /* HistoryViewModel.swift in Sources */,
 				18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */,
 				187B9B882C48DC03008913C3 /* CupListViewController.swift in Sources */,
 				187B9B9D2C49184A008913C3 /* HomeViewModel.swift in Sources */,
@@ -328,10 +375,15 @@
 				187B9B8B2C48DCAF008913C3 /* CupCollectionViewCell.swift in Sources */,
 				187B9B972C48E6B6008913C3 /* CupViewModel.swift in Sources */,
 				187B9B902C48DE5C008913C3 /* CupModel.swift in Sources */,
+				187B9BB92C494122008913C3 /* UIViewController+Extension.swift in Sources */,
+				187B9BB32C493489008913C3 /* CoreDataManager.swift in Sources */,
 				1871250A2C4833070035E438 /* AppDelegate.swift in Sources */,
 				187B9B842C484DCB008913C3 /* CircleView.swift in Sources */,
 				187B9B992C48E720008913C3 /* Constants.swift in Sources */,
+				187B9BA72C492E65008913C3 /* HistoryTableViewCell.swift in Sources */,
+				187B9BB12C49342E008913C3 /* HistoryModel.swift in Sources */,
 				187B9B922C48DF8C008913C3 /* Cell+Extensnion.swift in Sources */,
+				187B9BA22C492D91008913C3 /* HistoryViewController.swift in Sources */,
 				1871250C2C4833070035E438 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

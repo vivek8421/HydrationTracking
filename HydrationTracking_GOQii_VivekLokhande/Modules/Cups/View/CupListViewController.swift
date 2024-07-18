@@ -8,25 +8,35 @@
 import UIKit
 
 class CupListViewController: UIViewController {
-    
+// MARK: - IBoutlets
     @IBOutlet weak var cupCollectionView: UICollectionView!
     private let viewModel = CupViewModel()
 
+// MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         uiConfiguration()
     }
 
+// MARK: - UIConfigurations
     private func uiConfiguration() {
         cupCollectionView.register(CupCollectionViewCell.nib, forCellWithReuseIdentifier: CupCollectionViewCell.id)
         
         let selectedIndexPath = viewModel.getSelectedIndexPath()
         cupCollectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .top)
     }
+    
+// MARK: - IBActions
+    @IBAction func didSaveButtonClick() {
+        if let selectedCells = cupCollectionView.indexPathsForSelectedItems, let index = selectedCells.first?.row {
+                  self.viewModel.setSelectedCup(index: index)
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
 }
 
-
+// MARK: - UICollectionViewDataSource Methods
 extension CupListViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         viewModel.cups.count
@@ -42,7 +52,7 @@ extension CupListViewController: UICollectionViewDataSource {
     }
 }
 
-
+// MARK: - UICollectionViewDelegateFlowLayout Methods 
 extension CupListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = self.view.frame.width/2 - 40
@@ -52,11 +62,5 @@ extension CupListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
-    }
-}
-
-extension CupListViewController: UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        viewModel.setSelectedCup(index: indexPath.row)
     }
 }

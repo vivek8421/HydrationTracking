@@ -8,15 +8,27 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    
+// MARK: - IBOutlets
     @IBOutlet weak var lblCompleteTargetDrink: UILabel!
     @IBOutlet weak var lblTargetDrink: UILabel!
     @IBOutlet weak var drinkButton: UIButton!
     @IBOutlet weak var waterTracker: WaterAnimationTracker!
     private let viewModel = HomeViewModel()
     
+// MARK: - View Life Cycles
     override func viewDidLoad() {
         super.viewDidLoad()
+        uiConfiguration()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        let cupCapacity = viewModel.getSelectedCupCapacity()
+        drinkButton.setTitle("Drink \(cupCapacity) ml", for: .normal)
+    }
+    
+    
+// MARK: - Methods
+    private func uiConfiguration() {
         let todayTarget = viewModel.getTodayTarget()
         if todayTarget != nil {
             //if target is set
@@ -25,12 +37,6 @@ class HomeViewController: UIViewController {
             //if target is not set show Alert message
             showAlertForDailyTarget()
         }
-    }
-    
-    
-    override func viewWillAppear(_ animated: Bool) {
-        let cupCapacity = viewModel.getSelectedCupCapacity()
-        drinkButton.setTitle("Drink \(cupCapacity) ml", for: .normal)
     }
     
     private func showAlertForDailyTarget() {
@@ -65,11 +71,13 @@ class HomeViewController: UIViewController {
     }
     
     
+// MARK: - IBAction
     @IBAction func didDrinkButtonClick(_ sender: UIButton) {
         let selected = viewModel.getSelectedCupCapacity()
         let complete = viewModel.getCompleteDrinkAmount()
         viewModel.setCompleteTarget(intake: complete + selected)
         setTitlesAndGraph()
+        viewModel.createDrinkHistory(drink: selected)
     }
 
     @IBAction func didChangeCapacity(_ sender: UIButton) {

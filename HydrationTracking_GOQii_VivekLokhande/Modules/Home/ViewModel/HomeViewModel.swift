@@ -11,6 +11,7 @@ final class HomeViewModel {
     //dependent on
     private let cupViewModel = CupViewModel()
     private let customUserDefaults = CustomUserDefaults.shared
+    private let coreDataManager = CoreDataManager()
     
 // MARK: - User Default Methods
     func getSelectedCupCapacity() -> Int {
@@ -36,5 +37,19 @@ final class HomeViewModel {
         customUserDefaults.set(intake, key: .drinkComplete)
     }
     
+    func createDrinkHistory(drink: Int) {
+        let time = getCurrentTimeString()
+        let history = HistoryModel(time: time, drink: "\(drink)")
+        coreDataManager.saveHistory(history)
+    }
     
+    
+    func getCurrentTimeString() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "hh:mma"
+        dateFormatter.amSymbol = "AM"
+        dateFormatter.pmSymbol = "PM"
+        let currentTime = Date()
+        return dateFormatter.string(from: currentTime)
+    }
 }
