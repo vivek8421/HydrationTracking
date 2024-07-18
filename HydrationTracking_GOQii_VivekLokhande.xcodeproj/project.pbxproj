@@ -9,23 +9,45 @@
 /* Begin PBXBuildFile section */
 		1871250A2C4833070035E438 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187125092C4833070035E438 /* AppDelegate.swift */; };
 		1871250C2C4833070035E438 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871250B2C4833070035E438 /* SceneDelegate.swift */; };
-		1871250E2C4833070035E438 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871250D2C4833070035E438 /* ViewController.swift */; };
+		1871250E2C4833070035E438 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1871250D2C4833070035E438 /* HomeViewController.swift */; };
 		187125112C4833080035E438 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1871250F2C4833070035E438 /* Main.storyboard */; };
 		187125142C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */; };
 		187125162C48330A0035E438 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187125152C48330A0035E438 /* Assets.xcassets */; };
 		187125192C48330A0035E438 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 187125172C48330A0035E438 /* LaunchScreen.storyboard */; };
+		187B9B842C484DCB008913C3 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B832C484DCB008913C3 /* CircleView.swift */; };
+		187B9B882C48DC03008913C3 /* CupListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B872C48DC03008913C3 /* CupListViewController.swift */; };
+		187B9B8B2C48DCAF008913C3 /* CupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B892C48DCAF008913C3 /* CupCollectionViewCell.swift */; };
+		187B9B8C2C48DCAF008913C3 /* CupCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187B9B8A2C48DCAF008913C3 /* CupCollectionViewCell.xib */; };
+		187B9B902C48DE5C008913C3 /* CupModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B8F2C48DE5C008913C3 /* CupModel.swift */; };
+		187B9B922C48DF8C008913C3 /* Cell+Extensnion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B912C48DF8C008913C3 /* Cell+Extensnion.swift */; };
+		187B9B942C48DF9C008913C3 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B932C48DF9C008913C3 /* AppStoryboard.swift */; };
+		187B9B972C48E6B6008913C3 /* CupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B962C48E6B6008913C3 /* CupViewModel.swift */; };
+		187B9B992C48E720008913C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B982C48E720008913C3 /* Constants.swift */; };
+		18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */; };
+		18EA13A62C484528007E3FBE /* WaterAnimationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		187125062C4833070035E438 /* HydrationTracking_GOQii_VivekLokhande.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HydrationTracking_GOQii_VivekLokhande.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		187125092C4833070035E438 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1871250B2C4833070035E438 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		1871250D2C4833070035E438 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1871250D2C4833070035E438 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		187125102C4833070035E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		187125132C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HydrationTracking_GOQii_VivekLokhande.xcdatamodel; sourceTree = "<group>"; };
 		187125152C48330A0035E438 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		187125182C48330A0035E438 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1871251A2C48330A0035E438 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187B9B832C484DCB008913C3 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		187B9B872C48DC03008913C3 /* CupListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupListViewController.swift; sourceTree = "<group>"; };
+		187B9B892C48DCAF008913C3 /* CupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupCollectionViewCell.swift; sourceTree = "<group>"; };
+		187B9B8A2C48DCAF008913C3 /* CupCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CupCollectionViewCell.xib; sourceTree = "<group>"; };
+		187B9B8F2C48DE5C008913C3 /* CupModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupModel.swift; sourceTree = "<group>"; };
+		187B9B912C48DF8C008913C3 /* Cell+Extensnion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Cell+Extensnion.swift"; sourceTree = "<group>"; };
+		187B9B932C48DF9C008913C3 /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
+		187B9B962C48E6B6008913C3 /* CupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupViewModel.swift; sourceTree = "<group>"; };
+		187B9B982C48E720008913C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAnimationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +96,8 @@
 		187125202C4833260035E438 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				187B9B932C48DF9C008913C3 /* AppStoryboard.swift */,
+				187B9B982C48E720008913C3 /* Constants.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -90,6 +114,7 @@
 		187125222C48333F0035E438 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				187B9B912C48DF8C008913C3 /* Cell+Extensnion.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -105,6 +130,8 @@
 		187125242C4833640035E438 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */,
+				187B9B832C484DCB008913C3 /* CircleView.swift */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -112,7 +139,8 @@
 		187125252C4833770035E438 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				1871250D2C4833070035E438 /* ViewController.swift */,
+				187B9B862C48DB7E008913C3 /* Cups */,
+				187B9B852C48DB69008913C3 /* Home */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -138,8 +166,53 @@
 			isa = PBXGroup;
 			children = (
 				187125122C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld */,
+				18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		187B9B852C48DB69008913C3 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1871250D2C4833070035E438 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		187B9B862C48DB7E008913C3 /* Cups */ = {
+			isa = PBXGroup;
+			children = (
+				187B9B8E2C48DE3B008913C3 /* View */,
+				187B9B8D2C48DE32008913C3 /* Model */,
+				187B9B952C48E69B008913C3 /* ViewModel */,
+			);
+			path = Cups;
+			sourceTree = "<group>";
+		};
+		187B9B8D2C48DE32008913C3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				187B9B8F2C48DE5C008913C3 /* CupModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		187B9B8E2C48DE3B008913C3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				187B9B872C48DC03008913C3 /* CupListViewController.swift */,
+				187B9B892C48DCAF008913C3 /* CupCollectionViewCell.swift */,
+				187B9B8A2C48DCAF008913C3 /* CupCollectionViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		187B9B952C48E69B008913C3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				187B9B962C48E6B6008913C3 /* CupViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				187125192C48330A0035E438 /* LaunchScreen.storyboard in Resources */,
+				187B9B8C2C48DCAF008913C3 /* CupCollectionViewCell.xib in Resources */,
 				187125162C48330A0035E438 /* Assets.xcassets in Resources */,
 				187125112C4833080035E438 /* Main.storyboard in Resources */,
 			);
@@ -213,9 +287,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1871250E2C4833070035E438 /* ViewController.swift in Sources */,
+				18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */,
+				187B9B882C48DC03008913C3 /* CupListViewController.swift in Sources */,
+				1871250E2C4833070035E438 /* HomeViewController.swift in Sources */,
 				187125142C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld in Sources */,
+				187B9B942C48DF9C008913C3 /* AppStoryboard.swift in Sources */,
+				18EA13A62C484528007E3FBE /* WaterAnimationTracker.swift in Sources */,
+				187B9B8B2C48DCAF008913C3 /* CupCollectionViewCell.swift in Sources */,
+				187B9B972C48E6B6008913C3 /* CupViewModel.swift in Sources */,
+				187B9B902C48DE5C008913C3 /* CupModel.swift in Sources */,
 				1871250A2C4833070035E438 /* AppDelegate.swift in Sources */,
+				187B9B842C484DCB008913C3 /* CircleView.swift in Sources */,
+				187B9B992C48E720008913C3 /* Constants.swift in Sources */,
+				187B9B922C48DF8C008913C3 /* Cell+Extensnion.swift in Sources */,
 				1871250C2C4833070035E438 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
