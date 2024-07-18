@@ -27,7 +27,8 @@ class HistoryViewController: UIViewController {
     private func uiConfiguration() {
         historyTableView.register(HistoryTableViewCell.nib, forCellReuseIdentifier: HistoryTableViewCell.id)
         viewModel.noDataView = {
-            self.addNoDataView(tableView: self.historyTableView, message: "History not found")
+            self.addNoDataView(tableView: self.historyTableView,
+                               message: "History not found")
         }
         viewModel.dataPresentView = {
             self.historyTableView.backgroundView = nil

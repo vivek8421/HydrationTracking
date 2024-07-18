@@ -18,3 +18,12 @@ enum CupImages: String {
 enum ColorName: String {
     case waterColor = "WaterColor"
 }
+
+enum AlertTitle: String {
+    case congratulations = "Congratulations"
+    case setTarget = "Set today target"
+}
+enum AlertMessages: String {
+    case congratulations = "Your target is complete"
+    case setTarget = "Please enter the amount of water you drank today (in ml)"
+}

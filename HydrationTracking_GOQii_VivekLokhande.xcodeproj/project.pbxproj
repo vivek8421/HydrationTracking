@@ -159,8 +159,8 @@
 		187125252C4833770035E438 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				187B9B862C48DB7E008913C3 /* Cups */,
 				187B9B852C48DB69008913C3 /* Home */,
+				187B9B862C48DB7E008913C3 /* Cups */,
 				187B9BA02C4928DC008913C3 /* History */,
 			);
 			path = Modules;

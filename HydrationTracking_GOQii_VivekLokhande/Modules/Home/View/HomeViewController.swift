@@ -19,6 +19,8 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         uiConfiguration()
+        hideKeyboardOnTap()
+        checkForPermission()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,7 +42,8 @@ class HomeViewController: UIViewController {
     }
     
     private func showAlertForDailyTarget() {
-        let alertController = UIAlertController(title: "Set today target", message: "Please enter the amount of water you drank today (in ml)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: AlertTitle.setTarget.rawValue,
+                                                message: AlertMessages.setTarget.rawValue, preferredStyle: .alert)
         // Add a text field to the alert
         alertController.addTextField { textField in
             textField.placeholder = "Enter today target"
@@ -70,8 +73,22 @@ class HomeViewController: UIViewController {
         
         //if target is complete show Alert message
         if complete >= target {
-            showAlertMessage(title: "Congratulations", message: "Your target is complete")
+            showAlertMessage(title: AlertTitle.congratulations.rawValue,
+                             message: AlertMessages.congratulations.rawValue)
         }
+    }
+    
+    
+    
+    func hideKeyboardOnTap(){
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(dismissMyKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissMyKeyboard(){
+        view.endEditing(true)
     }
     
     
@@ -91,3 +108,46 @@ class HomeViewController: UIViewController {
     }
 }
 
+// MARK: - Notification Methods 
+extension HomeViewController {
+    func checkForPermission() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.getNotificationSettings { settings in
+            switch settings.authorizationStatus {
+            case .authorized:
+                self.dispatchNotificationOnSpecificTime()
+            case .denied:
+                return
+            case .notDetermined:
+                notificationCenter.requestAuthorization(options: [.alert, .sound]) { (didAllow, error) in
+                    if didAllow {
+                        self.dispatchNotificationOnSpecificTime()
+                    }
+                }
+            default:
+                return
+            }
+        }
+    }
+    
+    func dispatchNotificationOnSpecificTime() {
+        let notificationCenter = UNUserNotificationCenter.current()
+        let identifier = "my-morning-notification"
+        let title = "Reminder!"
+        let body = "Set you daily target"
+        let hour = 8
+        let minute = 0
+        let isDaily = true
+        let content = UNMutableNotificationContent()
+        content.title = title
+        content.body = body
+        content.sound = .default
+        var dateComponents = DateComponents(calendar: Calendar.current, timeZone: TimeZone.current)
+        dateComponents.hour = hour
+        dateComponents.minute = minute
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: isDaily)
+        let request = UNNotificationRequest(identifier: identifier, content: content, trigger: trigger)
+        notificationCenter.removePendingNotificationRequests(withIdentifiers: [identifier])
+        notificationCenter.add(request)
+    }
+}

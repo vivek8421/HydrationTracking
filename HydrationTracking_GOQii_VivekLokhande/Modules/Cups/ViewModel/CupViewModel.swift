@@ -18,7 +18,7 @@ final class CupViewModel {
         .init(imageName: .paperCup175ML, cupTitle: "Paper cup", cupCapicity: 175)
     ]
     
-    func getSelectedIndexPath() -> IndexPath{
+    func getSelectedIndexPath() -> IndexPath {
         let selectedIndex = customUserDefaults.get(key: .selectedCupIndex) as? Int
         return IndexPath(row: selectedIndex ?? 0, section: 0)
     }
