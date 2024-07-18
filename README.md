@@ -3,7 +3,7 @@
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/vivek8421/HydrationTracking.git
+   https://github.com/vivek8421/HydrationTracking.git
 
 ### Application Flow
 
