@@ -1,13 +1,9 @@
 # Water Tracking iOS Application
 
-### Setup Instructions
-1. Download the code using above green button
-2. Select last option for downloading in zip format or second last option to directly clone in Xcode
-
 ## Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/yourusername/drink-water-reminder.git
+   git clone https://github.com/vivek8421/HydrationTracking.git
 
 ### Application Flow
 
