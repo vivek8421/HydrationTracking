@@ -23,6 +23,8 @@
 		187B9B942C48DF9C008913C3 /* AppStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B932C48DF9C008913C3 /* AppStoryboard.swift */; };
 		187B9B972C48E6B6008913C3 /* CupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B962C48E6B6008913C3 /* CupViewModel.swift */; };
 		187B9B992C48E720008913C3 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B982C48E720008913C3 /* Constants.swift */; };
+		187B9B9B2C491350008913C3 /* CustomUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B9A2C491350008913C3 /* CustomUserDefaults.swift */; };
+		187B9B9D2C49184A008913C3 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187B9B9C2C49184A008913C3 /* HomeViewModel.swift */; };
 		18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */; };
 		18EA13A62C484528007E3FBE /* WaterAnimationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +48,8 @@
 		187B9B932C48DF9C008913C3 /* AppStoryboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppStoryboard.swift; sourceTree = "<group>"; };
 		187B9B962C48E6B6008913C3 /* CupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CupViewModel.swift; sourceTree = "<group>"; };
 		187B9B982C48E720008913C3 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		187B9B9A2C491350008913C3 /* CustomUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomUserDefaults.swift; sourceTree = "<group>"; };
+		187B9B9C2C49184A008913C3 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		18EA13A32C48361E007E3FBE /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
 		18EA13A52C484528007E3FBE /* WaterAnimationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterAnimationTracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -96,6 +100,7 @@
 		187125202C4833260035E438 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
+				187B9B9A2C491350008913C3 /* CustomUserDefaults.swift */,
 				187B9B932C48DF9C008913C3 /* AppStoryboard.swift */,
 				187B9B982C48E720008913C3 /* Constants.swift */,
 			);
@@ -175,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				1871250D2C4833070035E438 /* HomeViewController.swift */,
+				187B9B9C2C49184A008913C3 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -287,8 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187B9B9B2C491350008913C3 /* CustomUserDefaults.swift in Sources */,
 				18EA13A42C48361E007E3FBE /* CoreDataHelper.swift in Sources */,
 				187B9B882C48DC03008913C3 /* CupListViewController.swift in Sources */,
+				187B9B9D2C49184A008913C3 /* HomeViewModel.swift in Sources */,
 				1871250E2C4833070035E438 /* HomeViewController.swift in Sources */,
 				187125142C4833080035E438 /* HydrationTracking_GOQii_VivekLokhande.xcdatamodeld in Sources */,
 				187B9B942C48DF9C008913C3 /* AppStoryboard.swift in Sources */,

@@ -31,7 +31,7 @@ class CupCollectionViewCell: UICollectionViewCell {
             guard let cupData else { return }
             cupImageView.image = UIImage(named: cupData.imageName.rawValue)
             lblCupTitle.text = cupData.cupTitle
-            lblCupCapacity.text = cupData.cupCapicity
+            lblCupCapacity.text = "\(cupData.cupCapicity) ml"
         }
     }
     

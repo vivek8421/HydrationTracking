@@ -10,5 +10,5 @@ import Foundation
 struct CupModel {
     let imageName: CupImages
     let cupTitle: String
-    let cupCapicity: String
+    let cupCapicity: Int
 }

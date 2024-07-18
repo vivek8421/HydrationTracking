@@ -175,8 +175,11 @@
                                                 <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Drink 200 ml" cornerStyle="capsule" buttonSize="large">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="22"/>
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="didDrinkButtonClick:" destination="3rt-Yz-acc" eventType="touchUpInside" id="Uhx-Fv-rwM"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v9o-3n-75i">
                                                 <rect key="frame" x="0.0" y="70" width="353" height="50"/>
@@ -184,7 +187,9 @@
                                                     <constraint firstAttribute="height" constant="50" id="I8h-bv-wlz"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="tinted" title="Change Capacity" cornerStyle="capsule"/>
+                                                <buttonConfiguration key="configuration" style="tinted" title="Change Capacity" cornerStyle="capsule">
+                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="didChangeCapacity:" destination="3rt-Yz-acc" eventType="touchUpInside" id="wef-Qk-wB3"/>
                                                 </connections>
@@ -211,6 +216,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="wVi-AN-n5I"/>
                     <connections>
+                        <outlet property="drinkButton" destination="Egx-pe-WCs" id="NAs-NH-oOg"/>
                         <outlet property="waterTracker" destination="af3-8c-GwT" id="DDA-4U-8OS"/>
                     </connections>
                 </viewController>

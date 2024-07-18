@@ -10,15 +10,20 @@ import UIKit
 class CupListViewController: UIViewController {
     
     @IBOutlet weak var cupCollectionView: UICollectionView!
-    
-    let viewModel = CupViewModel()
+    private let viewModel = CupViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        cupCollectionView.register(CupCollectionViewCell.nib, forCellWithReuseIdentifier: CupCollectionViewCell.id)
+        uiConfiguration()
     }
 
+    private func uiConfiguration() {
+        cupCollectionView.register(CupCollectionViewCell.nib, forCellWithReuseIdentifier: CupCollectionViewCell.id)
+        
+        let selectedIndexPath = viewModel.getSelectedIndexPath()
+        cupCollectionView.selectItem(at: selectedIndexPath, animated: true, scrollPosition: .top)
+    }
 }
 
 
@@ -48,7 +53,10 @@ extension CupListViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 20
     }
-    
-    
-    
+}
+
+extension CupListViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.setSelectedCup(index: indexPath.row)
+    }
 }
