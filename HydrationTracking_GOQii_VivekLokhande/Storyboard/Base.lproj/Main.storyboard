@@ -18,20 +18,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6xK-pu-rns" customClass="CircleView" customModule="HydrationTracking_GOQii_VivekLokhande" customModuleProvider="target">
-                                <rect key="frame" x="71.666666666666686" y="301" width="250" height="250"/>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="FcA-Sx-mwB"/>
-                                    <constraint firstAttribute="height" constant="250" id="MaX-uq-XzV"/>
-                                </constraints>
-                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="V1N-aO-p9I">
+                                <rect key="frame" x="0.0" y="59" width="393" height="710"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hN2-3V-Y1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6xK-pu-rns" firstAttribute="centerX" secondItem="2Ts-SJ-Xyy" secondAttribute="centerX" id="Gdk-7k-kGL"/>
-                            <constraint firstItem="6xK-pu-rns" firstAttribute="centerY" secondItem="2Ts-SJ-Xyy" secondAttribute="centerY" id="lvS-xL-ZxS"/>
+                            <constraint firstItem="V1N-aO-p9I" firstAttribute="top" secondItem="hN2-3V-Y1a" secondAttribute="top" id="IQ0-33-8ls"/>
+                            <constraint firstItem="hN2-3V-Y1a" firstAttribute="trailing" secondItem="V1N-aO-p9I" secondAttribute="trailing" id="SVR-Tj-OqC"/>
+                            <constraint firstItem="V1N-aO-p9I" firstAttribute="leading" secondItem="hN2-3V-Y1a" secondAttribute="leading" id="UtO-Mi-kp2"/>
+                            <constraint firstItem="hN2-3V-Y1a" firstAttribute="bottom" secondItem="V1N-aO-p9I" secondAttribute="bottom" id="yMf-1F-Tff"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="History" image="history" id="Qxo-wI-9VO"/>
@@ -109,7 +107,7 @@
                                                 <rect key="frame" x="88.666666666666671" y="106.33333333333333" width="158.66666666666663" height="156.33333333333337"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xke-7g-0pQ">
-                                                        <rect key="frame" x="10.333333333333343" y="0.0" width="138" height="38.333333333333336"/>
+                                                        <rect key="frame" x="36.666666666666671" y="0.0" width="85" height="38.333333333333336"/>
                                                         <subviews>
                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4L-pI-6Rx">
                                                                 <rect key="frame" x="0.0" y="0.0" width="20.666666666666668" height="38.333333333333336"/>
@@ -117,8 +115,8 @@
                                                                 <color key="textColor" name="WaterColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/2210ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-aE-Rfm">
-                                                                <rect key="frame" x="20.666666666666679" y="0.0" width="117.33333333333331" height="38.333333333333336"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/0ml" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fB-aE-Rfm">
+                                                                <rect key="frame" x="20.666666666666657" y="0.0" width="64.333333333333343" height="38.333333333333336"/>
                                                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="32"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -165,18 +163,24 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IuD-oK-Tac">
                                         <rect key="frame" x="0.0" y="435.33333333333337" width="353" height="120"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-pe-WCs">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Egx-pe-WCs">
                                                 <rect key="frame" x="0.0" y="0.0" width="353" height="50"/>
+                                                <color key="backgroundColor" systemColor="linkColor"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="xvH-Mp-W0x"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                                 <inset key="contentEdgeInsets" minX="18" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <inset key="imageEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="filled" title="Drink 200 ml" cornerStyle="capsule" buttonSize="large">
-                                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="20"/>
-                                                </buttonConfiguration>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="Drink 200 ml">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                        <integer key="value" value="24"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="didDrinkButtonClick:" destination="3rt-Yz-acc" eventType="touchUpInside" id="Uhx-Fv-rwM"/>
                                                 </connections>
@@ -217,6 +221,8 @@
                     <navigationItem key="navigationItem" id="wVi-AN-n5I"/>
                     <connections>
                         <outlet property="drinkButton" destination="Egx-pe-WCs" id="NAs-NH-oOg"/>
+                        <outlet property="lblCompleteTargetDrink" destination="E4L-pI-6Rx" id="KMN-Fh-tX2"/>
+                        <outlet property="lblTargetDrink" destination="2fB-aE-Rfm" id="Xvt-eR-1Ks"/>
                         <outlet property="waterTracker" destination="af3-8c-GwT" id="DDA-4U-8OS"/>
                     </connections>
                 </viewController>
@@ -271,11 +277,11 @@
         <namedColor name="WaterColor">
             <color red="0.10980392156862745" green="0.63921568627450975" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
