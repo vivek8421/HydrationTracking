@@ -9,15 +9,15 @@
 import UIKit
 import CoreData
 
-final class CoreDataManager{
+final class CoreDataManager {
     
     private let coreDataHelper = CoreDataHelper.shared
     private var context: NSManagedObjectContext {
         return coreDataHelper.persistentContainer.viewContext
     }
     
-// MARK: - Save Student Data
-    func saveHistory(_ history: HistoryModel){
+// MARK: - Save History Data
+    func saveHistory(_ history: HistoryModel) {
         let historyEntity = HistoryEntity(context: context)
         historyEntity.drink = history.drink
         historyEntity.time = history.time
@@ -25,8 +25,8 @@ final class CoreDataManager{
         self.saveContext()
     }
     
-// MARK: - Fetch Students data
-    func fetchHistory() -> [HistoryEntity]{
+// MARK: - Fetch History data
+    func fetchHistory() -> [HistoryEntity] {
         var history: [HistoryEntity] = []
         do{
             history = try context.fetch(HistoryEntity.fetchRequest())
@@ -37,8 +37,8 @@ final class CoreDataManager{
         return history
     }
     
-// MARK: - other common  functions
-    private func saveContext(){
+// MARK: - Other common functions
+    private func saveContext() {
         do{
             try context.save()
         }
